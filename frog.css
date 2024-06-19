@@ -1,0 +1,62 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-image: url('images/pound1.jpg');
+    background-repeat: no-repeat; 
+    background-size: cover; 
+  }
+  
+  #frog {
+    width: 280px;
+    height: 200px;
+    background-image: url('images/bluefrog.png');
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    
+    position: absolute;
+    bottom: 0;
+    transition: bottom 0.5s ease;
+}
+
+
+.but-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none; /* Ignore mouse events on the UFO */
+}
+
+.butt2 {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  animation: flyAround2 30s linear infinite;
+  /* z-index: -1; */
+}
+
+@keyframes flyAround2 {
+ 
+  0% {
+    left: calc(100% - 100px);
+    top: 50%;
+  }
+  25% {
+    left: 50%;
+    top: 85%;
+  }
+  50% {
+    left: -90px;
+    top: 20%;
+  }
+  75% {
+    right: 0%;
+    top: 20%;
+  }
+  100% {
+    right: 75%;
+    top: 0%;
+  }
+ 
+}
